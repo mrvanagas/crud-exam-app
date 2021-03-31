@@ -27,10 +27,10 @@ export class UserTable extends Component {
           : <table className={styles.Table}>
             <thead>
               <tr>
-                <th>name</th>
-                <th>age</th>
-                <th>email</th>
-                <th>password</th>
+                <th>Vardas</th>
+                <th>Amzius</th>
+                <th>E. Pastas</th>
+                <th>Slaptazodis</th>
                 <th></th>
               </tr>
             </thead>

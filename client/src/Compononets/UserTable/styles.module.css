@@ -19,4 +19,12 @@
   
   .Button {
     margin-right: 1rem;
+    border-radius: 20px;
+    background-color: #fafafa;
+  }
+
+  .Button:focus {
+    margin-right: 1rem;
+    border-radius: 20px;
+    background-color: cyan;
   }

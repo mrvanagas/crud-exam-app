@@ -51,22 +51,22 @@ export class FormCreateUser extends Component {
       <form onSubmit={this.handleSubmit}>
         <h3>{actionName}</h3>
         <InputGroup
-          name="name"
+          name="Vardas"
           value={name}
           handleChange={(name) => this.setState({ name })}
         />
         <InputGroup
-          name="age"
+          name="Amzius"
           value={age}
           handleChange={(age) => this.setState({ age })}
         />
         <InputGroup
-          name="email"
+          name="E. Pastas"
           value={email}
           handleChange={(email) => this.setState({ email })}
         />
         <InputGroup
-          name="password"
+          name="Slaptazodis"
           value={password}
           handleChange={(password) => this.setState({ password })}
         />
