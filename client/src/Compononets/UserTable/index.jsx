@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styles from './styles.module.css';
 
-export class CarTable extends Component {
+export class UserTable extends Component {
 
-  createDataRows = (cars) =>
-    cars.map(({ id, name, age, email, password }) => (
+  createDataRows = (users) =>
+    users.map(({ id, name, age, email, password }) => (
       <tr key={id}>
         <td>{name}</td>
         <td>{age}</td>
@@ -18,11 +18,11 @@ export class CarTable extends Component {
     ))
 
   render() {
-    const { cars } = this.props;
-    const rows = this.createDataRows(cars);
+    const { users } = this.props;
+    const rows = this.createDataRows(users);
     return (
       <div>
-        { cars.length === 0
+        { users.length === 0
           ? <h2>Nėra vartotoju</h2>
           : <table className={styles.Table}>
             <thead>
@@ -30,7 +30,7 @@ export class CarTable extends Component {
                 <th>name</th>
                 <th>age</th>
                 <th>email</th>
-                <th>Engine Volume</th>
+                <th>password</th>
                 <th></th>
               </tr>
             </thead>
@@ -42,4 +42,4 @@ export class CarTable extends Component {
   }
 }
 
-export default CarTable;
+export default UserTable;
