@@ -61,3 +61,33 @@ const updateUser = async (req, res) => {
         res.status(404).json({message: error.message});
     }
 }
+
+const deleteUser = async (req, res) => {
+    const { id } = req.params;
+    try {
+        if (!mongoose.Types.ObjectId.isValid(id))
+        throw new Error(`Wrong ID ${id} format`);
+        const deletedUser = await userModel.findByIdAndDelete(id);
+        if (deletedUser === null)
+            throw new Error(`Could not find and delete animal with ID ${id}`);
+        res.status(200).json({
+            user: {
+                id: deletedUser._id,
+                name: deletedUser.name,
+                age: deletedUser.age,
+                email: deletedUser.email,
+                password: deletedUser.password
+            }
+        });
+    }
+    catch (error) {
+        res.status(404).json({message: error.message})
+    }
+}
+
+module.exports = {
+    getUsers,
+    postUser,
+    updateUser,
+    deleteUser
+}
