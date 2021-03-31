@@ -13,8 +13,6 @@ export class FormCreateUser extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { name, age, email, password, isUpdating } = this.state;
-    // VALIDACIJA
-    // UsersManager.prototype.saveUser || UsersManager.prototype.createUser
     this.props.handleSubmit({
       name,
       age,
