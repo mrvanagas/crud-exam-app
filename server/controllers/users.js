@@ -25,3 +25,22 @@ const getUsers = async (req, res) => {
         res.status(404).json({message: error.message})
     }
 }
+
+const postUser = async (req, res) => {
+    const { name, age, email, password} = req.body;
+    try {
+        const newUser = await userModel.create({ name, age, email, password});
+        res.status(200).json({
+            user: {
+                id: newUser._id,
+                userName: newUser.name,
+                userAge: newUser.age,
+                userEmail: newUser.email,
+                userPassword: newUser.password
+            }
+        });
+    }
+    catch (error) {
+        res.status(404).json({ message: error.message});
+    }
+}
