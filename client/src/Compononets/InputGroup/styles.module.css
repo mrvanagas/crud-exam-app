@@ -1,0 +1,14 @@
+.InputGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .InputGroup label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+  
+  .InputGroup input {
+    display: block;
+    width: 100%
+  } 
