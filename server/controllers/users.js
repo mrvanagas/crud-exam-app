@@ -44,3 +44,20 @@ const postUser = async (req, res) => {
         res.status(404).json({ message: error.message});
     }
 }
+
+const updateUser = async (req, res) => {
+    const { id } = req.params
+    try {
+        if (!mongoose.Types.ObjectId.isValid(id))
+            throw new Error(`Wrong ID ${id} format`);
+        const updatedUser = await userModel.findByIdAndUpdate(id, req.body, {new: true})
+        if (updatedUser === null)
+            throw new Error(`Could not find and update User with ID ${id}`);
+        res.status(200).json({
+            user: updatedUser
+        });
+    }
+    catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
