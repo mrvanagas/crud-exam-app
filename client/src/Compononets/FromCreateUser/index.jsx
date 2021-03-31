@@ -16,8 +16,8 @@ export class FormCreateUser extends Component {
     this.props.handleSubmit({
       name,
       age,
-      email: Number(email),
-      password: Number(password)
+      email,
+      password
     });
     if (!isUpdating) {
       this.setState({

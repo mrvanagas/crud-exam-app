@@ -17,7 +17,7 @@ export default class UsersManager extends Component {
     API.getUsers(({ users }) => this.setState({ users }), this.displayError)
   }
 
-  //create and post
+  //create and edit
   createUser = (data) => {
     API.postUser(data, this.fetchUsers, this.displayError);
   }
