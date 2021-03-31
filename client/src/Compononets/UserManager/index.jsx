@@ -56,7 +56,7 @@ export default class UsersManager extends Component {
         />
         <FormCreateUser
           handleSubmit={this.state.editedUserId ? this.saveUser : this.createUser}
-          isUpdating={Boolean(this.state.editedUserId)}
+          isUpdating={this.state.editedUserId}
           editedUser={this.state.editedUserId ? this.state.users.find(c => c.id === this.state.editedUserId)  : null}
         />
       </div>

@@ -45,7 +45,7 @@ export class FormCreateUser extends Component {
 
   render() {
     const { name, age, email, password, isUpdating } = this.state;
-    const actionName = (isUpdating ? 'Update' : 'Create') + ' User';
+    const actionName = `${isUpdating ? 'Create' : 'Update'}  User`;
 
     return (
       <form onSubmit={this.handleSubmit}>
