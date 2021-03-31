@@ -12,7 +12,7 @@ export class UserTable extends Component {
         <td>{password}</td>
         <td>
           <button className={styles.Button} onClick={() => this.props.editUser(id)}>Atnaujinti</button>
-          <button className={styles.Button} onClick={() => this.props.deleteuser(id)}>istrinti</button>
+          <button className={styles.Button} onClick={() => this.props.deleteUser(id)}>istrinti</button>
         </td>
       </tr>
     ))
