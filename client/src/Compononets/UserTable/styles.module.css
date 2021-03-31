@@ -1,0 +1,22 @@
+.Table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .Table th, .Table td {
+    padding: 0.5rem
+  }
+  
+  .Table th {
+    background-color: #000;
+    color: white;
+  }
+  
+  .Table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .Button {
+    margin-right: 1rem;
+  }
